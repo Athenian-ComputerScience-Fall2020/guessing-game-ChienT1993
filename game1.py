@@ -19,19 +19,19 @@ def user():
     user_input= int(input("Type your number here: "))
     return user_input
 
+user()
+
 if user() == random_num:
     print ("Congratulation, you have guess the correct number!")
 elif user() < random_num:
     print ("Your number is too low!")
     tries = tries + 1
-elif user() > random_num:
-    print ("Your number is too high!")
-    tries = tries + 1
 elif user() > 10:
     print ("Sorry, your number is out of range!")
     tries = tries + 1
+elif user() > random_num:
+    print ("Your number is too high!")
+    tries = tries + 1
 
 if tries == 5:
-    print ("Game over, the number you are looking for is: " + random_num)
-elif tries > 0:
-    print (user())
+    print ("Game over, you are out of chances!")
