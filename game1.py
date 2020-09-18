@@ -23,6 +23,7 @@ inp1 = user()
 
 if inp1 == random_num:
     print ("Congratulation, you have guess the correct number!")
+    exit ()
 elif inp1 < random_num:
     print ("Your number is too low!")
     tries = tries + 1
@@ -38,6 +39,7 @@ elif inp1 > random_num:
 
 if inp2 == random_num:
     print ("Congratulation, you have guess the correct number!")
+    exit ()
 elif inp2 < random_num:
     print ("Your number is too low!")
     tries = tries + 1
@@ -53,6 +55,7 @@ elif inp2 > random_num:
 
 if inp3 == random_num:
     print ("Congratulation, you have guess the correct number!")
+    exit ()
 elif inp3 < random_num:
     print ("Your number is too low!")
     tries = tries + 1
@@ -68,6 +71,7 @@ elif inp3 > random_num:
 
 if inp4 == random_num:
     print ("Congratulation, you have guess the correct number!")
+    exit ()
 elif inp4 < random_num:
     print ("Your number is too low!")
     tries = tries + 1
@@ -83,3 +87,4 @@ elif inp4 > random_num:
 
 if tries == 5:
     print ("Game over, you are out of chances!")
+    print ("The correct answer is " + str(random_num))
