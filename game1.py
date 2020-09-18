@@ -13,25 +13,73 @@ import random
 
 random_num= random.randint(0,10)
 
-tries = 0
+tries = 1
 
 def user():
     user_input= int(input("Type your number here: "))
     return user_input
 
-user()
+inp1 = user()
 
-if user() == random_num:
+if inp1 == random_num:
     print ("Congratulation, you have guess the correct number!")
-elif user() < random_num:
+elif inp1 < random_num:
     print ("Your number is too low!")
     tries = tries + 1
-elif user() > 10:
+    inp2 = user()
+elif inp1 > 10:
     print ("Sorry, your number is out of range!")
     tries = tries + 1
-elif user() > random_num:
+    inp2 = user()
+elif inp1 > random_num:
     print ("Your number is too high!")
     tries = tries + 1
+    inp2 = user()
+
+if inp2 == random_num:
+    print ("Congratulation, you have guess the correct number!")
+elif inp2 < random_num:
+    print ("Your number is too low!")
+    tries = tries + 1
+    inp3 = user()
+elif inp2 > 10:
+    print ("Sorry, your number is out of range!")
+    tries = tries + 1
+    inp3 = user()
+elif inp2 > random_num:
+    print ("Your number is too high!")
+    tries = tries + 1
+    inp3 = user()
+
+if inp3 == random_num:
+    print ("Congratulation, you have guess the correct number!")
+elif inp3 < random_num:
+    print ("Your number is too low!")
+    tries = tries + 1
+    inp4 = user()
+elif inp3 > 10:
+    print ("Sorry, your number is out of range!")
+    tries = tries + 1
+    inp4 = user()
+elif inp3 > random_num:
+    print ("Your number is too high!")
+    tries = tries + 1
+    inp4 = user()
+
+if inp4 == random_num:
+    print ("Congratulation, you have guess the correct number!")
+elif inp4 < random_num:
+    print ("Your number is too low!")
+    tries = tries + 1
+    inp5 = user()
+elif inp4 > 10:
+    print ("Sorry, your number is out of range!")
+    tries = tries + 1
+    inp5 = user()
+elif inp4 > random_num:
+    print ("Your number is too high!")
+    tries = tries + 1
+    inp5 = user()
 
 if tries == 5:
     print ("Game over, you are out of chances!")
