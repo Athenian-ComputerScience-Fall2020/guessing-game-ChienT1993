@@ -26,12 +26,12 @@ def guess(tries, inp):
     if inp == random_num:
         print ("Congratulation, you have guess the correct number!")
         exit ()
-    elif inp < random_num:
-        print ("Your number is too low!")
+    elif inp > y and inp < x:
+        print ("Sorry, your number is out of range!")
         tries = tries + 1
         inp = user()
-    elif inp > 10:
-        print ("Sorry, your number is out of range!")
+    elif inp < random_num:
+        print ("Your number is too low!")
         tries = tries + 1
         inp = user()
     elif inp > random_num:
@@ -49,3 +49,10 @@ for a in range (2, z+1):
     output = guess (tries, inp)
     tries = output [0]
     inp = output [1]
+
+again = input("Do you want to play again?(yes/no): ")
+
+if again == "yes":
+    inp= user()
+elif again == "no":
+    print ("Thanks for playing the game!")
