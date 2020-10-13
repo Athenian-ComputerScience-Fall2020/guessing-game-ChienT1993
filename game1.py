@@ -25,22 +25,18 @@ def user():
 def guess(tries, inp):
     if inp == random_num:
         print ("Congratulation, you have guess the correct number!")
-        print ("apple")
         exit ()
     elif inp > y and inp < x:
         print ("Sorry, your number is out of range!")
         tries = tries + 1
-        print ("apple")
         inp = user()
     elif inp < random_num:
         print ("Your number is too low!")
         tries = tries + 1
-        print ("apple")
         inp = user()
     elif inp > random_num:
         print ("Your number is too high!")
         tries = tries + 1
-        print ("apple")
         inp = user()
     if tries == z:
         print ("Game over, you are out of chances!")
@@ -58,8 +54,9 @@ if again == "yes":
     tries = 1
     z = int(input("Enter how many guesses you want to do: "))
     inp = user()
-    print (tries)
-    output = guess (tries,inp)
-    print (output [0])
+    for a in range (2, z+1):
+        output = guess (tries, inp)
+        tries = output [0]
+        inp = output [1]
 elif again == "no":
     print ("Thanks for playing the game!")
