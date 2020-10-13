@@ -14,7 +14,6 @@ import random
 x = int(input("Enter a number where your range of guessing number will start: "))
 y = int(input("Enter a number where your range of guessing number will end: "))
 z = int(input("Enter how many guesses you want to do: "))
-
 random_num= random.randint(x,y)
 tries= 1
 
@@ -42,11 +41,6 @@ def guess(tries, inp):
     if tries == z:
         print ("Game over, you are out of chances!")
         print ("The correct answer is " + str(random_num))
-        again = str(input("Do you want to play again?(yes/no): "))
-        if again == "yes":
-            inp= user()
-        elif again == "no":
-            print ("Thanks for playing the game!")
     return (tries, inp)
 
 inp= user()
@@ -54,3 +48,14 @@ for a in range (2, z+1):
     output = guess (tries, inp)
     tries = output [0]
     inp = output [1]
+
+again = str(input("Do you want to play again?(yes/no): "))
+if again == "yes":
+    tries = 1
+    z = int(input("Enter how many guesses you want to do: "))
+    inp = user()
+    print (tries)
+    guess(tries,inp)
+    print (tries)
+elif again == "no":
+    print ("Thanks for playing the game!")
